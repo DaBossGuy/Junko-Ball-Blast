@@ -1,0 +1,50 @@
+[gd_scene load_steps=2 format=3 uid="uid://ckbwm3eqnxye"]
+
+[ext_resource type="Script" path="res://mainmenu.gd" id="1_ba164"]
+
+[node name="Mainmenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = 14.0
+offset_right = 2.0
+offset_bottom = 14.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ba164")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = -43.0
+offset_top = -19.0
+offset_right = 1209.0
+offset_bottom = 647.0
+color = Color(0.470588, 0.12549, 0.196078, 1)
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 321.0
+offset_top = 106.0
+offset_right = 913.0
+offset_bottom = 376.0
+text = "BEST GAME EVER NOT A VIRUS 100% GAURATANTEED"
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 486.0
+offset_top = 252.0
+offset_right = 652.0
+offset_bottom = 356.0
+text = "STATR"
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 762.0
+offset_top = 603.0
+offset_right = 1354.0
+offset_bottom = 873.0
+text = "does a bitcoin miner count as a virus? surely not..."
+
+[connection signal="pressed" from="Button" to="." method="_on_trigger_button_pressed"]
