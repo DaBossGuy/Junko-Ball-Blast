@@ -10,8 +10,10 @@ bounce = 1.0
 radius = 37.1452
 
 [node name="Ball" type="RigidBody2D"]
+position = Vector2(339, 240)
 physics_material_override = SubResource("1")
 gravity_scale = 4.0
+metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(3.8125, -1.03125)

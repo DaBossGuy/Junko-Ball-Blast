@@ -11,8 +11,8 @@ config_version=5
 [application]
 
 config/name="Junko Ball Blast"
-config/description="The BEST around"
-config/version="1.0"
+config/description="The best ball blaster"
+config/version="0.0.1.0"
 run/main_scene="res://mainmenu.tscn"
 config/features=PackedStringArray("4.2")
 boot_splash/image="res://splash.png"

@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://nh8ehc33w8tj"]
+
+[ext_resource type="Texture2D" uid="uid://dadae0hjb3hk3" path="res://assets/diabetes.png" id="1_hyxqv"]
+
+[sub_resource type="PhysicsMaterial" id="4"]
+bounce = 1.0
+
+[sub_resource type="CapsuleShape2D" id="2"]
+radius = 28.7617
+height = 309.37
+
+[node name="Wall8" type="StaticBody2D"]
+position = Vector2(439, 229)
+rotation = 0.0031575
+physics_material_override = SubResource("4")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(2.13502, -0.634214)
+scale = Vector2(0.826203, 0.316375)
+texture = ExtResource("1_hyxqv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = 1.5708
+shape = SubResource("2")
