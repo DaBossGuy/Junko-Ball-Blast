@@ -10,82 +10,90 @@
 script = ExtResource("1")
 Ball = ExtResource("2")
 
-[node name="WallContainer" type="Node" parent="."]
-
-[node name="Wall" parent="WallContainer" instance=ExtResource("3_y0h8u")]
-position = Vector2(467, 618)
-rotation = 0.00223979
-
-[node name="Wall2" parent="WallContainer" instance=ExtResource("3_y0h8u")]
-position = Vector2(172, 620)
-rotation = 0.00223979
-
-[node name="Wall3" parent="WallContainer" instance=ExtResource("3_y0h8u")]
-position = Vector2(31, 479)
-rotation = 1.55206
-
-[node name="Wall4" parent="WallContainer" instance=ExtResource("3_y0h8u")]
-position = Vector2(28, 186)
-rotation = 1.57654
-
-[node name="Wall5" parent="WallContainer" instance=ExtResource("3_y0h8u")]
-position = Vector2(151, 29)
-rotation = 3.13472
-
-[node name="Wall6" parent="WallContainer" instance=ExtResource("3_y0h8u")]
-position = Vector2(445, 28)
-rotation = 3.13472
-
-[node name="Wall7" parent="WallContainer" instance=ExtResource("3_y0h8u")]
-position = Vector2(729, 27)
-rotation = 3.13472
-
-[node name="Wall8" parent="WallContainer" instance=ExtResource("3_y0h8u")]
-position = Vector2(1023, 28)
-rotation = 3.13472
-
-[node name="Wall9" parent="WallContainer" instance=ExtResource("3_y0h8u")]
-position = Vector2(1140, 191)
-rotation = 4.7062
-
-[node name="Wall10" parent="WallContainer" instance=ExtResource("3_y0h8u")]
-position = Vector2(1143, 482)
-rotation = 4.7062
-
-[node name="Wall11" parent="WallContainer" instance=ExtResource("3_y0h8u")]
-position = Vector2(1003, 617)
-rotation = 6.2665
-
-[node name="Wall12" parent="WallContainer" instance=ExtResource("3_y0h8u")]
-position = Vector2(744, 619)
-rotation = 6.2665
-
-[node name="Ball" parent="." instance=ExtResource("2")]
-position = Vector2(263, 202)
-max_contacts_reported = 100
-contact_monitor = true
-
 [node name="Background" type="Sprite2D" parent="."]
 z_index = -6
 position = Vector2(576, 327)
 scale = Vector2(1.44361, 1.4574)
 texture = ExtResource("4_2maql")
 
+[node name="WallContainer" type="Node" parent="."]
+
+[node name="Wall" parent="WallContainer" instance=ExtResource("3_y0h8u")]
+position = Vector2(462, 671)
+rotation = 0.00223979
+
+[node name="Wall2" parent="WallContainer" instance=ExtResource("3_y0h8u")]
+position = Vector2(166, 664)
+rotation = 0.00223979
+
+[node name="Wall3" parent="WallContainer" instance=ExtResource("3_y0h8u")]
+position = Vector2(-28, 512)
+rotation = 1.55206
+
+[node name="Wall4" parent="WallContainer" instance=ExtResource("3_y0h8u")]
+position = Vector2(-25, 215)
+rotation = 1.57654
+
+[node name="Wall5" parent="WallContainer" instance=ExtResource("3_y0h8u")]
+position = Vector2(142, -24)
+rotation = 3.13472
+
+[node name="Wall13" parent="WallContainer" instance=ExtResource("3_y0h8u")]
+position = Vector2(-27, 9)
+rotation = 1.56238
+
+[node name="Wall6" parent="WallContainer" instance=ExtResource("3_y0h8u")]
+position = Vector2(438, -24)
+rotation = 3.13472
+
+[node name="Wall7" parent="WallContainer" instance=ExtResource("3_y0h8u")]
+position = Vector2(733, -20)
+rotation = 3.13472
+
+[node name="Wall8" parent="WallContainer" instance=ExtResource("3_y0h8u")]
+position = Vector2(1024, -22)
+rotation = 3.13472
+
+[node name="Wall14" parent="WallContainer" instance=ExtResource("3_y0h8u")]
+position = Vector2(1180, 18)
+rotation = 4.70587
+
+[node name="Wall9" parent="WallContainer" instance=ExtResource("3_y0h8u")]
+position = Vector2(1177, 194)
+rotation = 4.7062
+
+[node name="Wall10" parent="WallContainer" instance=ExtResource("3_y0h8u")]
+position = Vector2(1179, 485)
+rotation = 4.7062
+
+[node name="Wall11" parent="WallContainer" instance=ExtResource("3_y0h8u")]
+position = Vector2(1037, 658)
+rotation = 6.2665
+
+[node name="Wall12" parent="WallContainer" instance=ExtResource("3_y0h8u")]
+position = Vector2(744, 667)
+rotation = 6.2665
+
+[node name="Ball" parent="." instance=ExtResource("2")]
+position = Vector2(91, 336)
+max_contacts_reported = 100
+contact_monitor = true
+
 [node name="Label" type="Label" parent="."]
 offset_right = 228.0
-offset_bottom = 34.0
+offset_bottom = 23.0
 scale = Vector2(2.21719, 4.38969)
 text = "CLICK FOR MOAR JUNKOSSS"
-
-[node name="Label2" type="Label" parent="."]
-offset_left = 792.0
-offset_top = 618.0
-offset_right = 1096.0
-offset_bottom = 652.0
-scale = Vector2(1.1629, 1.18824)
-text = "ANDORID FERVSOIN COMING SOOOYNJ"
 
 [node name="Discord Manager" type="Node" parent="."]
 script = ExtResource("5_p2ba4")
 
+[node name="Button" type="Button" parent="."]
+offset_left = 916.0
+offset_top = 220.0
+offset_right = 1079.0
+offset_bottom = 357.0
+text = "back to main menuu"
+
 [connection signal="body_entered" from="Ball" to="Discord Manager" method="_on_ball_body_entered"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

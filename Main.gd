@@ -7,3 +7,7 @@ func _input(event):
 		var new_ball = Ball.instantiate()
 		new_ball.position = get_viewport().get_mouse_position()
 		add_child(new_ball)
+
+
+func _on_button_pressed():
+	get_tree().change_scene_to_file("res://mainmenu.tscn")
